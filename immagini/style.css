@@ -1,0 +1,84 @@
+:root {
+    --header-bg: #333333;
+    --body-bg: #BABABA;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--body-bg);
+}
+
+
+.title {
+    background-color: var(--header-bg);
+    text-align: center;
+    padding: 40px;
+}
+
+.title h1 {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.nav-list ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: 6px;
+    padding-left: 6px;
+}
+
+.nav-list a {
+    color: black;
+    text-decoration: none;
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+}
+
+.section-img {
+    position: relative;
+}
+
+.section-img img {
+    width: 33.33%;
+    height: 300px;
+    object-fit: cover;
+    min-width: 250px;
+    border-radius: 20px;
+}
+
+.section-text {
+    color: white;
+}
+
+.section-text h3 {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 115px;
+    display: none;
+}
+
+.section-text p {
+    position: absolute;
+    z-index: 1;
+    top: 140px;
+    left: 75px;
+    display: none;
+}
+
+.section-img:hover .section-text h3,
+.section-img:hover .section-text p {
+    display: block;
+}
