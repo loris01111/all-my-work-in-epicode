@@ -1,0 +1,94 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.bodyColor{
+    background-color: red;
+}
+
+.header {
+    margin-bottom: 50px;
+    border-bottom: 2px solid black;
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttonChangeText{
+    width: 70px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.productsContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid grey;
+    padding: 20px;
+
+}
+
+.imgContainer{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 250px;
+}
+
+.img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.imgVisible{
+    display: none;
+}
+
+.linkAmazon{
+    text-decoration: none;
+    color: blue;
+}
+
+.reviewContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.button{
+    height: 30px;
+    margin-top: 10px;
+}
+
+.input{
+    margin-top: 10px;
+}
+
+.footer {
+    border-top: 2px solid black;
+    margin-top: 50px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.divAddress{
+   display: flex;
+   gap: 10px;
+}

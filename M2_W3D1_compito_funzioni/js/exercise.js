@@ -143,9 +143,9 @@
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
-function cutString(stringa){
- let stringWithoutFirst = stringa.split("").slice(1,-1).join("");
- return stringWithoutFirst;
-}
+// function cutString(stringa){
+//  let stringWithoutFirst = stringa.split("").slice(1,-1).join("");ss
+//  return stringWithoutFirst;
+// }
 
-console.log(cutString("Ciao come stai"));
+// console.log(cutString("Ciao come stai"));

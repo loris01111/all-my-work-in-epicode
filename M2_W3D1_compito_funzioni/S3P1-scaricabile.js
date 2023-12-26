@@ -43,34 +43,74 @@ console.log(reverseString("loris"));*/
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/*function upperFirst(stringa){
+    let frase = stringa.charAt(0).toUpperCase() + stringa.substr(1);
+    return frase;
+}
+
+
+console.log(upperFirst("ciao"));*/
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* function giveMeRandom(n){
+    let newArray = [];
+    for(let i=0; i<=n; i++){
+    newArray.push(Math.round(Math.random()*10));
+    }
+    return newArray;
+}
+
+console.log(giveMeRandom(5)); */
 
 //EXTRA:
 /* ESERCIZIO 1
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* function area(l1,l2){
+    let base = l1;
+    let altezza = l2;
+    let areaRettangolo = base * altezza;
+    return areaRettangolo;
+}
+
+console.log(area(5,2)); */
 
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "crazyDiff" che calcola la differenza assoluta tra un numero fornito e 19.
  Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* function crazyDiff(n){
+  let differenza = Math.abs(n-19); 
+  if(differenza>19){
+    let nuovoValore = differenza * 3; 
+    return nuovoValore;
+  }else console.log("il valore calcolato è minore di 19");
+}
+
+console.log(crazyDiff(65)); */
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
  La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* function codify(stringa) {
+    if (stringa.includes("code", 0)) {
+        let sentence = String(stringa);
+        return sentence;
+    } else {
+        let sentence = String("code ") + String(stringa);
+        return sentence;
+    }
+}
+
+console.log(codify("code"));
+console.log(codify("Loris")); */
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
@@ -78,10 +118,22 @@ console.log(reverseString("loris"));*/
  SUGGERIMENTO: operatore modulo
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* function check3and7(numero){
+    if((numero % 3==0) || (numero % 7==0)){
+        return true;
+    }else return false;
+}
+
+console.log(check3and7(9));
+console.log(check3and7(4));*/
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* function cutString(stringa){
+ let stringWithoutFirst = stringa.split("").slice(1,-1).join("");ss
+ return stringWithoutFirst;
+}
+
+console.log(cutString("Ciao come stai")); */
