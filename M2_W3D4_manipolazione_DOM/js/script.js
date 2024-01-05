@@ -49,8 +49,10 @@ function createAndAppendProducts() {
         div.classList.add("div");
         const title = document.createElement("h3");
         title.textContent = product.title;
+        title.classList.add("titleProducts");
         const description = document.createElement("p");
         description.textContent = product.description;
+        description.classList.add("descriptionProducts");
         const imgContainer = document.createElement("div");
         imgContainer.classList.add("imgContainer");
         const img = document.createElement("img");
@@ -63,6 +65,7 @@ function createAndAppendProducts() {
         }
         const price = document.createElement("p");
         price.textContent = product.price + "€";
+        price.classList.add("priceProducts");
         function changePriceColor() {
             let r = Math.round(Math.random() * 256);
             let g = Math.round(Math.random() * 256);
