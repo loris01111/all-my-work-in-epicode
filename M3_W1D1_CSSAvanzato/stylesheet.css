@@ -1,0 +1,55 @@
+.jumbotron .col-md-6 h1{
+    /* background-color: red; */
+}
+
+.nav > span{
+    /* background-color: red; */
+}
+
+.jumbotron .col-md-6 p + p a{
+    color: red
+}
+
+/* .row .col-md-6:first-child{
+    background-color: red;
+} */
+
+main .row .col-md-8 .blog-post:first-of-type{
+    /* background-color: red; */
+}
+
+main .row .col-md-8 .blog-post:first-of-type hr:first-of-type{
+    background-color: red;
+}
+
+.nav span:nth-of-type(2n){
+/* background-color: red; */
+}
+
+aside div:first-of-type + div ol li{
+    /* background-color: red; */
+}
+
+main .row .col-md-8 div:nth-of-type(2) p:first-of-type a{
+    /* background-color: red; */
+}
+
+main .row .col-md-8 div:last-of-type ul li:nth-of-type(2){
+    /* color: red; */
+}
+
+body footer + a{
+    /* color: red; */
+}
+
+.blog-pagination a:last-of-type{
+    /* background-color: red; */
+}
+
+footer a:nth-of-type(2){
+    /* color: red; */
+}
+
+main .row .col-md-8 .blog-post:first-of-type .blog-post-meta a{
+    color: red;
+}
