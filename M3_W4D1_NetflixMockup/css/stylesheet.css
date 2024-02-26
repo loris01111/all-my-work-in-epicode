@@ -1,0 +1,138 @@
+body {
+    background-color: #141414
+}
+
+.container-fluid:first-of-type .row .col-8 img {
+    width: 100px;
+}
+
+.container-fluid:first-of-type .row .col-4 img {
+    width: 40px;
+}
+
+.container-fluid:first-of-type .row .col-8 a {
+    color: #ADADAD;
+    font-weight: 500;
+}
+
+.container-fluid:first-of-type .row .col-4 {
+    color: #ADADAD;
+}
+
+.container-fluid:first-of-type .row .col-4 p {
+    font-weight: 500;
+}
+
+#logo2 {
+    width: 100px;
+}
+
+#bars {
+    color: #ADADAD;
+}
+
+#personalUser {
+    width: 40px;
+}
+
+#down {
+    color: #ADADAD;
+    ;
+}
+
+.container-fluid:first-of-type .col-8 a:hover {
+    color: #e8e8e8;
+}
+
+.container-fluid:first-of-type .col-4 i:hover,
+p:hover {
+    color: #e8e8e8;
+    ;
+}
+
+.container-fluid:nth-of-type(1) .row .col-8 button {
+    background-color: black;
+}
+
+.container-fluid:nth-of-type(1) .row .col-4 button {
+    height: 30px;
+}
+
+.carousel-img-padding {
+    padding: 0 0.2em;
+}
+
+/* .zoom-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.zoom-container img{
+   top: 0;
+   left: 0;
+   transition: all 500ms ease-in;
+   scale: 1.0;
+}
+
+.zoom-container img:hover{
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    width: 900px;
+    scale: 1.1;
+} */
+
+.zoom-container img:hover{
+  padding: 20px;
+    width: 150px;
+   animation: zoom-out 1s ease  ;
+}
+
+@keyframes zoom-out {
+    0% {
+        transform: scale(1,1)
+    }
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+
+/* .zoom-container {
+    overflow: hidden;
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.zoom-container:hover {
+    transform: scale(1.5);
+    overflow: hidden;
+    padding: 20px;
+} */
+
+
+footer{
+    padding-top: 130px;
+    color: #808080;
+}
+
+#loghi{
+    width: 30px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #808080;
+}
+
+#service-code{
+    border: 1px solid #808080;
+    padding: 3px;
+}
+
+footer a:hover{
+    text-decoration: underline #808080;
+}

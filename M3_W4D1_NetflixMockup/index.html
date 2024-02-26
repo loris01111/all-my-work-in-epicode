@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Ne</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/stylesheet.css">
+</head>
+
+<body>
+    <nav class="container-fluid mt-1 px-5 ">
+        <div class="row ">
+            <div class="col-8 gap-4 align-items-center d-none d-md-flex ">
+                <img class="me-3  " src="./assets/imgs/Netflix_Logo_RGB.png" alt="logo netlfix">
+                <a class="text-decoration-none " href="">Home</a>
+                <a class="text-decoration-none " href="">TV Shows</a>
+                <a class="text-decoration-none " href="">Movies</a>
+                <a class="text-decoration-none " href="">Recently Added</a>
+                <a class="text-decoration-none " href="">My list</a>
+            </div>
+            <div class="d-md-none d-flex gap-3 align-items-center align-content-center ">
+                <img id="logo2" src="./assets/imgs/Netflix_Logo_RGB.png" alt="logo netflix">
+                <i id="bars" class="fa-solid fa-bars"></i>
+                <img id="personalUser" src="https://i.pinimg.com/236x/57/fe/c9/57fec982857a92197f37c99c678d4292.jpg"
+                    alt="personal user img">
+                <i id="down" class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="col-4 gap-4 justify-content-end align-items-center d-none d-md-flex ">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <p class="mt-3 ">KIDS</p>
+                <i class="fa-solid fa-bell"></i>
+                <div>
+                    <img src="https://i.pinimg.com/236x/57/fe/c9/57fec982857a92197f37c99c678d4292.jpg"
+                        alt="personal user img">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero -->
+    <div class="container-fluid pt-4 px-5 ">
+        <div class="row">
+            <div class="col-8 d-flex gap-5  align-items-center  ">
+                <h1 class="text-light p-2 ">TV Shows</h1>
+                <div class="dropdown ">
+                    <button
+                        class="btn btn dropdown-toggle rounded-0 text-white border border-light d-flex align-items-center gap-4 "
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">Genres</button>
+                    <ul class="dropdown-menu ">
+                        <li><button class="dropdown-item bg-light " type="button">Horror</button></li>
+                        <li><button class="dropdown-item bg-light " type="button">Drammatic</button></li>
+                        <li><button class="dropdown-item bg-light " type="button">Thriller</button></li>
+                        <li><button class="dropdown-item bg-light " type="button">Action</button></li>
+                        <li><button class="dropdown-item bg-light " type="button">Romantic</button></li>
+                        <li><button class="dropdown-item bg-light " type="button">Comedy</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4 justify-content-end d-none d-md-flex ">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                    <button type="button" class="btn btn-outline-secondary  "><i
+                            class="fa-solid fa-bars-staggered"></i></button>
+                    <button type="button" class="btn btn-outline-secondary  "><i class="fa-solid fa-grip"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- hero 1 -->
+    <div class="container-fluid ps-5 bg-prime">
+        <div class="row">
+            <div class="col-12 py-1 d-flex align-items-center ">
+                <h4 class="mt-4 text-white ">Trending now</h4>
+            </div>
+            <div class="col-12 ">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6 d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/1.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6  d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/2.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 d-none d-md-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/3.png" alt="card img"
+                                        class="d-block  w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-lg-3 d-md-none d-none d-md-grid  d-lg-block carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/4.png" alt="card img"
+                                        class="d-block   w-100  ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/5.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/6.png" alt="card img"
+                                        class="d-block  w-100   ">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6  d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/7.png" alt="card img"
+                                        class="d-block w-100   ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6  d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/8.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 d-none d-md-grid carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/9.png" alt="card img"
+                                        class="d-block  w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-lg-3 d-md-none d-lg-block d-none d-md-grid carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/10.png" alt="card img"
+                                        class="d-block   w-100  ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/11.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/12.png" alt="card img"
+                                        class="d-block  w-100   ">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item ">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6 d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/13.png" alt="card img"
+                                        class="d-block w-100   ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6 d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/14.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 d-none d-md-grid carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/15.png" alt="card img"
+                                        class="d-block  w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-lg-3 d-md-none d-lg-block d-none d-md-grid carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/16.png" alt="card img"
+                                        class="d-block   w-100  ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/17.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/18.png" alt="card img"
+                                        class="d-block  w-100   ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button> -->
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon ms-auto " aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hero 2 -->
+    <div class="container-fluid pt-3 ps-5 bg-prime">
+        <div class="row">
+            <div class="col-12 py-1 d-flex align-items-center ">
+                <h4 class="mt-4 text-white ">Watch it again</h4>
+            </div>
+            <div class="col-12 ">
+                <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6 d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/18.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6  d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/17.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 d-none d-md-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/16.png" alt="card img"
+                                        class="d-block  w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-lg-3 d-md-none d-none d-md-grid  d-lg-block carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/15.png" alt="card img"
+                                        class="d-block   w-100  ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/14.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/13.png" alt="card img"
+                                        class="d-block  w-100   ">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6  d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/12.png" alt="card img"
+                                        class="d-block w-100   ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6  d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/11.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 d-none d-md-grid carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/10.png" alt="card img"
+                                        class="d-block  w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-lg-3 d-md-none d-lg-block d-none d-md-grid carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/9.png" alt="card img"
+                                        class="d-block   w-100  ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/8.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/7.png" alt="card img"
+                                        class="d-block  w-100   ">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item ">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6 d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/6.png" alt="card img"
+                                        class="d-block w-100   ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6 d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/5.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 d-none d-md-grid carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/4.png" alt="card img"
+                                        class="d-block  w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-lg-3 d-md-none d-lg-block d-none d-md-grid carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/3.png" alt="card img"
+                                        class="d-block   w-100  ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/2.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/1.png" alt="card img"
+                                        class="d-block  w-100   ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button> -->
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon ms-auto " aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- hero 3 -->
+    <div class="container-fluid pt-3 ps-5 bg-prime">
+        <div class="row">
+            <div class="col-12 py-1 d-flex align-items-center ">
+                <h4 class="mt-4 text-white ">New releases</h4>
+            </div>
+            <div class="col-12 ">
+                <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6 d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/7.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6  d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/8.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 d-none d-md-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/9.png" alt="card img"
+                                        class="d-block  w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-lg-3 d-md-none d-none d-md-grid  d-lg-block carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/10.png" alt="card img"
+                                        class="d-block   w-100  ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/11.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/12.png" alt="card img"
+                                        class="d-block  w-100   ">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6  d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/3.png" alt="card img"
+                                        class="d-block w-100   ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6  d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/6.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 d-none d-md-grid carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/13.png" alt="card img"
+                                        class="d-block  w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-lg-3 d-md-none d-lg-block d-none d-md-grid carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/1.png" alt="card img"
+                                        class="d-block   w-100  ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/15.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/14.png" alt="card img"
+                                        class="d-block  w-100   ">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item ">
+                            <div class="row">
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6 d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/18.png" alt="card img"
+                                        class="d-block w-100   ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 col-6 d-grid  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/17.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-md-4 col-lg-3 d-none d-md-grid carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/16.png" alt="card img"
+                                        class="d-block  w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 col-lg-3 d-md-none d-lg-block d-none d-md-grid carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/15.png" alt="card img"
+                                        class="d-block   w-100  ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/14.png" alt="card img"
+                                        class="d-block w-100 ">
+                                </div>
+                                <div
+                                    class="col-xxl-2 d-none d-md-none d-lg-none d-xxl-block  carousel-img-padding zoom-container">
+                                    <img id="img-c" src="./assets/imgs/movies/13.png" alt="card img"
+                                        class="d-block  w-100   ">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button> -->
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls3"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon ms-auto " aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container d-flex justify-content-center align-items-center ">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="row ">
+                    <div class="col d-flex justify-content-start align-content-center mb-3 ">
+                        <i id="loghi" class="fa-brands fa-square-facebook"></i>
+                        <i id="loghi" class="fa-brands fa-instagram"></i>
+                        <i id="loghi" class="fa-brands fa-twitter"></i>
+                        <i id="loghi" class="fa-brands fa-youtube"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <a href="">Audio and Subtitles</a>
+                        </div>
+                        <div class="col-3">
+                            <a href="">Audio description</a>
+                        </div>
+                        <div class="col-3">
+                            <a href="">Help center</a>
+                        </div>
+                        <div class="col-3">
+                            <a href="">Gift cards</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <a href="">Media center</a>
+                        </div>
+                        <div class="col-3">
+                            <a href="">Inestor relations</a>
+                        </div>
+                        <div class="col-3">
+                            <a href="">Jobs</a>
+                        </div>
+                        <div class="col-3">
+                            <a href="">Terms of use</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <a href="">Privacy</a>
+                        </div>
+                        <div class="col-3">
+                            <a href="">Legal notices</a>
+                        </div>
+                        <div class="col-3">
+                            <a href="">Cookies prefernces</a>
+                        </div>
+                        <div class="col-3">
+                            <a href="">Corporate infromation</a>
+                        </div>
+                        <div class="row">
+                            <div class="col d-flex  justify-content-start align-content-center ">
+                                <a href="">Contact us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mt-3 ">
+                            <a id="service-code" href="">Service code</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mt-2 ">
+                            <p>1197-2024 Netflix, Inc. i-0d00fcda2fdf9c0de</p>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        
+    </footer>
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a2bf55134e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

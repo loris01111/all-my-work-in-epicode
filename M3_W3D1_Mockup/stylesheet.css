@@ -1,0 +1,28 @@
+nav{
+    background-color: rgba(242, 240, 240, 0.8);
+}
+
+#personalImg{
+    width: 40px !important; 
+    height: 30px;
+}
+
+#faceMan{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+section .container .row div:first-of-type button:first-of-type{
+    border: 0;
+    background-color: rgba(0, 255, 72, 0.74);
+    color: white;
+    font-weight:500;
+}
+
+section .container .row div:first-of-type button:last-of-type{
+    border: 0;
+    background-color: white;
+    color: rgb(3, 3, 92);
+    font-weight:500;
+}
