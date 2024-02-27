@@ -45,7 +45,7 @@ body {
 }
 
 .container-fluid:first-of-type .col-4 i:hover,
-p:hover {
+.container-fluid:first-of-type .col-4 p:hover {
     color: #e8e8e8;
     ;
 }
@@ -82,7 +82,7 @@ p:hover {
     scale: 1.1;
 } */
 
-.zoom-container img:hover{
+/* .zoom-container img:hover{
   padding: 20px;
     width: 150px;
    animation: zoom-out 1s ease  ;
@@ -98,7 +98,7 @@ p:hover {
     100% {
         transform: scale(1,1);
     }
-}
+} */
 
 
 /* .zoom-container {
@@ -113,6 +113,12 @@ p:hover {
     padding: 20px;
 } */
 
+.zoom-container {
+    transition: all 0.20s ease-in-out;
+}
+.zoom-container:hover {
+    transform: scale(1.2);
+}
 
 footer{
     padding-top: 130px;
@@ -133,6 +139,10 @@ footer a{
     padding: 3px;
 }
 
-footer a:hover{
+#service-code:hover{
+    color: #e8e8e8;
+}
+
+#a-footer:hover{
     text-decoration: underline #808080;
 }
