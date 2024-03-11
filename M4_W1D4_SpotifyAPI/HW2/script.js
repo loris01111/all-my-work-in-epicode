@@ -44,7 +44,7 @@
 
 // }
 
-const eminemCardContainer = document.querySelector("#eminem");
+const eminemCardContainer = document.getElementById("eminem");
 
 
 const urlEminem = "https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem";
@@ -64,13 +64,12 @@ const getCardsEminem = async () => {
 }
 
 
+// const songs = getCardsEminem().then(res => {
+//     res.map(song => createCard(song))
+// });
 
-const songs = getCardsEminem().then(res => {
-    res.map(song => createCard(song))
-});
 
-
-console.log(songs);
+// console.log(songs);
 
 
 const createCard = (song) => {
@@ -90,3 +89,21 @@ const createCard = (song) => {
 };
 
 
+const search =  () => {
+    const buttonToSearch = document.querySelector("#button-search");
+    const inputSearchValue = document.querySelector("#searchField");
+    buttonToSearch.addEventListener("click", () => {
+        getCardsEminem().then(res => {
+            console.log(res.map);
+            res.map(song => createCard(song))
+        })
+        if (inputSearchValue.value.indexOf("eminem")!== -1) {
+            eminemCardContainer.setAttribute("class", "display: block");
+        }else {
+            console.log("non c'è nulla");
+        }
+        
+    })
+}
+
+search();
