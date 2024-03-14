@@ -44,6 +44,7 @@
 
 // }
 
+const cardsContainer = document.getElementById("searchResults");
 const eminemCardContainer = document.getElementById("eminem");
 const metallicaCardContainer = document.getElementById("metallica");
 const queenCardContainer = document.getElementById("queen");
@@ -52,6 +53,7 @@ const queenCardContainer = document.getElementById("queen");
 const urlEminem = "https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem";
 const urlMetallica = "https://striveschool-api.herokuapp.com/api/deezer/search?q=metallica";
 const urlQueen = "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen";
+
 
 const getCardsEminem = async () => {
     try {
@@ -64,6 +66,7 @@ const getCardsEminem = async () => {
         console.log(error);
     }
 }
+
 
 const getCardsMetallica = async () => {
     try {
@@ -95,7 +98,6 @@ const getCardsQueen = async () => {
 
 
 // console.log(songs);
-
 
 const createCard = (song) => {
     const card = document.createElement("div");
