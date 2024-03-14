@@ -1,0 +1,4 @@
+#containerCards img {
+    max-width: 250px !important;
+    object-fit: cover;
+}
