@@ -1,66 +1,49 @@
 // const cardContainerGroup = document.getElementById("card-container-group");
+const main = document.getElementsByTagName("main");
 const input = document.getElementById("inputSearch");
 const searchButton = document.getElementById("search-button");
-const main = document.getElementById("main");
+const emptyButton = document.getElementById("empty-button");
+const section = document.getElementById("section");
+const modalBody = document.getElementById("modal-body");
+const cartNumber = document.getElementById("cart-number");
+const saveCart = JSON.parse(localStorage.getItem("cart"));
+const cart = saveCart? saveCart : [];
+
+const addBookToCart = (book) => {
+    cart.push(book);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    window.location.reload();
+    console.log(cart);
+};
 
 function createCard(book) {
-    //     const card = document.createElement("div");
-
-    //     card.innerHTML = `div class="card" style="width: 18rem;">
-    //     <img src="${book.img}" class="card-img-top" alt="...">
-    //     <div class="card-body">${book.title}</h5>
-    //         <p class="card-text">${book.category} - ${book.price}</p>
-    //         <a href="#" class="btn btn-primary">Aggiungi al carrello</a>
-    //     </div>
-    // </div>`  
-    //     cardContainerGroup.append(card);
-
-
-
-    // non mi prende i backtick, quindi non li userò 
-    // const rowCols = document.createElement("div");
-    // rowCols.classList.add("row", "row-cols-1", "row-cols-md-2", "g-4", "mt-5");
-
-    // const col = document.createElement("div");
-
-    // const card = document.createElement("div");
-    // card.classList.add("card");
-
-    // const img = document.createElement("img");
-    // img.classList.add("card-img-top");
-    // img.src = book.img;
-
-    // const cardBody = document.createElement("div");
-    // cardBody.classList.add("card-body");
-
-    // const cardPrice = document.createElement("p");
-    // cardPrice.classList.add("card-text");
-    // cardPrice.textContent = book.price;
-
-    // const button = document.createElement("a");
-    // button.classList.add("btn", "btn-primary");
-    // button.textContent = "Aggiungi al carrello";
-
-    // cardBody.append(cardPrice, button);
-    // card.append(img, cardBody)
-    // col.append(card);
-    // rowCols.append(col);
-    // main.append(rowCols);
-
-
     const card = document.createElement("div");
+    card.setAttribute("id", "card-generated");
 
     card.innerHTML =
-        ` <div class="card rounded-top-3" style="width: 18rem; height: 33rem">
+        ` <div class="card rounded-top-3" style="width: 18rem; ">
          <img src="${book.img}" class="card-img-top  " alt="...">
-         <div class="card-body d-flex flex-column justify-content-end">${book.title}</h5>
-             <p class="card-text">${book.category} - ${book.price}</p>
-             <a href="#" class="btn btn-primary ">Aggiungi al carrello</a>
+         <div class="card-body">
+             <h5 class="card-title text-truncate ">${book.title}</h5>
+             <p class="card-text">${book.category} - ${book.price}€</p>
+             <a href="#" class="btn btn-success aggiungiButton">Aggiungi al carrello</a><span>
+             <a  href="#" class="btn btn-success saltaButton">salta</a></span>
+            <a href="dettagli.html?id=${book.asin}" class="btn btn-success mt-3 dettagliButton">Dettagli</a>
          </div>
      </div>`
 
-    main.append(card);
+    card.querySelector(".aggiungiButton").addEventListener("click", () => {
+        addBookToCart({ title: book.title, price: book.price });
+        console.log(cart);
+    });
+
+    card.querySelector(".saltaButton").addEventListener("click", () => {
+        card.remove();
+    });
+
+    section.append(card);
 }
+
 
 
 const getBooks = async () => {
@@ -78,37 +61,75 @@ getBooks().then(books => {
         createCard(book);
 
     })
-})
 
+    const filterBooks = async (query) => {
+        const books = await getBooks();
+        console.log(books);
+        return books.filter((book) => {
+            const title = book.title.toLowerCase();
+            const toLowerQuery = query.toLowerCase();
+            return title.includes(toLowerQuery);
+        })
 
-const filterBooks = async (query) => {
-    const books = await getBooks();
-    console.log(books);
-    return books.filter((book) => {
-        const title = book.title.toLowerCase();
-        const toLowerQuery = query.toLowerCase();
-        return title.includes(toLowerQuery);
+    }
+
+    input.addEventListener("change", () => {
+        if (input.value === "") {
+            getBooks().then(books => {
+                books.map((book) => {
+                    createCard(book);
+
+                })
+            })
+        }
+    });
+
+    searchButton.addEventListener("click", async () => {
+        section.innerHTML = ""
+        filterBooks(input.value).then(books => {
+            console.log(books);
+            books.map((book) => {
+                createCard(book);
+            })
+        })
     })
+});
+
+
+const populateCardModal = () => {
+    if (saveCart) {
+        saveCart.map((cartItem) => {
+            const div = document.createElement("div");
+            div.innerHTML = `<p>${cartItem.title}, ${cartItem.price}</p>`;
+            modalBody.append(div);
+        })
+    }else {
+       const div2 = document.createElement("div");
+       div2.innerHTML = `<p>Carrello vuoto</p>`;
+       modalBody.append(div2);
+       
+    }
+}
+
+populateCardModal();
+
+const emptyCart = () => {
+    emptyButton.addEventListener("click", () => {
+        localStorage.removeItem("cart");
+        window.location.reload();
+    })
+}
+
+emptyCart();
+
+const showNumberCart = () => {
+    if (saveCart) {
+        const length = saveCart.length;
+        cartNumber.innerText = length;
+    }else{
+        cartNumber.innerText = 0;
+    }
 
 }
 
-input.addEventListener("change", () => {
-    if (input.value === "") {
-        getBooks().then(books => {
-            books.map((book) => {
-                createCard(book);
-
-            })
-        })
-    }
-});
-
-searchButton.addEventListener("click", async () => {
-    main.innerHTML = ""
-    filterBooks(input.value).then(books => {
-        console.log(books);
-        books.map((book) => {
-            createCard(book);
-        })
-    })
-})
+showNumberCart();
